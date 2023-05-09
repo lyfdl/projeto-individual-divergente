@@ -5,7 +5,7 @@
 body {
     margin: 0%;
     padding: 0%;
-    background-color: grey;
+    background-color: rgb(37, 37, 37);
 }
 
 .header {
@@ -49,6 +49,12 @@ a {
     justify-content: space-evenly;
     align-items: center;
 }
+/* width: 15%;
+list-style: none;
+display: flex;
+justify-content: space-between;
+align-items: center; */
+
 
 .banner {
     background-image: url("banner_tiro.jpg");
@@ -96,6 +102,8 @@ a {
     margin-top: 5vh;
     color: black;
     font-size: 20px;
+    justify-content: center;
+    text-align: center;
     /* justificar conteudo */
 }
 
@@ -107,7 +115,61 @@ a {
 }
 
 .personagens {
-    height: 200px;
+    height: 75vh;
     width: 100%;
-    background-color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+
+}
+.per_titulo{
+    width: 100%;
+    display: flex;
+    color: rgb(253, 245, 235);
+    justify-content: center;
+}
+.subtitulo_per{
+    width: 100%;
+    color: rgb(253, 245, 235);
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.per1{
+    background-image: url("perfil_tris.jpg");
+    width: 37vh;
+    height: 55vh;
+    background-size: cover;
+    border-radius: 10px;
+}
+.per2{
+    background-image: url("perfil_four2.jpg");
+    width: 37vh;
+    height: 55vh;
+    background-size: cover;
+    border-radius: 10px;
+}
+.per3{
+    background-image: url("caleb.jpg");
+    width: 37vh;
+    height: 55vh;
+    background-size: cover;
+    border-radius: 10px;
+}
+.per4{
+    background-image: url("perfil_christina2.jpg");
+    width: 37vh;
+    height: 55vh;
+    background-size: cover;
+    border-radius: 10px;
+}
+.per5{
+    background-image: url("perfil_will.jpg");
+    width: 37vh;
+    height: 55vh;
+    background-size: cover;
+    border-radius: 10px;
 }
