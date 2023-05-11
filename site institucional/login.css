@@ -1,0 +1,54 @@
+.banner {
+    background-image: url('banner_trisquatro.jpg');
+    width: 100%;
+    height: 87vh;
+    background-size: cover;
+}
+.formulario{
+    background-color: #faebd7;
+    width: 20%;
+    height: 40vh;
+    border-radius: 10px;
+}
+.introduce{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+}
+.dados {
+    margin-top: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
+.dados input {
+    width: 80%;
+    height: 6vh;
+    border: 1px solid rgb(3, 31, 59);
+    border-radius: 5px;
+    text-align: start;
+    background-color: #b1b6bc;
+}
+
+.dados button {
+    margin-top: 10px;
+    background: rgb(3, 31, 59);
+    color: #fff;
+    width: 81%;
+    height: 6vh;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    color: white;
+    background-color: #96aceb;
+    border: 2px solid rgb(3, 31, 59);
+    transition: 0.15s ease-in-out;
+}
+

@@ -41,7 +41,8 @@ a {
 }
 
 .nav_bar {
-    width: 15%;
+    /* width: 15%; */
+    width: 12%;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
