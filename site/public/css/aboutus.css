@@ -1,0 +1,25 @@
+
+.banner{
+    background-image: url(../assets/imgs/banner_about.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.intro {
+    margin-top: 20vh;
+    margin-left: 10vh;
+    width: 50%;
+    height: 40vh;
+}
+
+.span_title{
+    font-size: 90px;
+    color:rgb(253, 245, 235);
+}
+
+.content {
+    margin-left: 5vh;
+    margin-top: 3vh;
+    color:rgb(253, 245, 235);
+}

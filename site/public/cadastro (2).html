@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <span class="logo2"><a href="home.html"><img class="logo" src="../public/assets/imgs/Divergent.png"
+                        alt=""></a></span>
+            <div class="left">
+                <ul class="nav_bar">
+                    <!-- <li> <a href="home.html"> HOME</a></li> -->
+                    <li> <a href="simulador.html">ABOUT US</a></li>
+                    <li> <a href="simulador.html">PICTURES</a></li>
+                    <!-- <li> <a href="simulador.html">UPDATES</a></li> OU TALK WITH US -->
+                    <li> <a href="login.html">LOGIN</a></li>
+                    <li><a href="cadastro.html">SIGN UP</a></li>
+                </ul>
+                <div class="icons-footer">
+                    <a href=""><i class="fa fa-twitter-square"></i></a>
+                    <a href=""><i class="fa fa-facebook-square"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="principal">
+
+        <div class="content">
+
+            <!-- Iniciando formulário -->
+            <div class="inicial">
+                <div class="titulo">CADASTRE-SE</div> <br>
+                <div class="subtitulo">
+                    Cadastre-se em nosso site para receber pesquisas personalizadas baseadas em suas respotas ao nossos
+                    quizzes diários!
+                </div>
+            </div>
+
+            <div class="dados">
+                <p><input id="ipt_nome" type="text" placeholder="Nome"></p>
+                <p><input id="ipt_email" type="email" placeholder="E-mail"></p>
+                <p><input id="ipt_senha" type="text" placeholder="Senha"></p>
+                <p><input id="ipt_senha_2" type="text" placeholder="Confirme sua senha"></p>
+                <button class="enviar" onclick="cadastrar()">SING UP</button>
+            </div>
+
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+            <div id="div_erros_login"></div>
+        </div>
+        <!-- Iniciando img mapa -->
+        <div class="mapa">
+            <div class="imagem"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function cadastrar() {
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = ipt_nome.value;
+        var emailVar = ipt_email.value;
+        var senhaVar = ipt_senha.value;
+        var confirmacaoSenhaVar = ipt_senha_2.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+</script>
+
+
+
+
+<!-- <div class="contato">
+    <div class="telefone">
+        <span class="icon"><img class="icon" src="./assets/img/chamada-telefonica.png"
+                alt=""></span>
+        <div class="conteudo">
+            <div class="title">TELEFONE</div>
+            <div>(00)12345-6789</div>
+        </div>
+    </div>
+    <div class="email">
+        <span class="icon"><img class="icon" src="./assets/img/cartas.png" alt=""></span>
+        <div class="conteudo">
+            <div class="title">E-MAIL</div>
+            <div>secure_ship@hotmail.com</div>
+        </div>
+    </div>
+    <div class="endereço">
+        <span class="icon"><img class="icon" src="./assets/img/predio-comercial.png" alt=""></span>
+        <div class="conteudo">
+            <DIV class="title">ENDEREÇO</DIV>
+            <div>Rua Haddock Lobo, 595 - SP</div>
+        </div>
+    </div>
+
+</div> -->
