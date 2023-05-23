@@ -18,11 +18,11 @@ body {
   font-family: "Exo 2", sans-serif;
 }
 
-.dash-right .avisos .container {
+/* .dash-right .avisos .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .dash-right .avisos .container .div-form {
   width: 100%;

@@ -125,7 +125,9 @@ a {
     margin-top: 15vh;
     height: 75vh;
     width: 100%;
-    background-color: black;
+    /* background-color: black; */
+    background-image: url('../assets/imgs/gif1.gif');
+    background-size: cover;
     display: flex;
     flex-direction: column;
 
@@ -135,7 +137,6 @@ a {
     display: flex;
     color: rgb(253, 245, 235);
     justify-content: center;
-    margin-top: 5vh;
 }
 .subtitulo_per{
     width: 100%;
@@ -145,7 +146,8 @@ a {
 }
 .cards{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 10vh;
 }
 .per1{
     background-image: url("../assets/imgs/perfil_tris.jpg");
@@ -181,4 +183,32 @@ a {
     height: 55vh;
     background-size: cover;
     border-radius: 10px;
+}
+
+
+.footer {
+    width: 100%;
+    height: 40vh;
+    /* background-image: url('../assets/imgs/gif1.gif');
+    background-size: cover; */
+}
+.direitos{
+    color: whitesmoke;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 5vh;
+}
+.logo1{
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.paginas{
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
