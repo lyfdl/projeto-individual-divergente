@@ -49,8 +49,8 @@
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
                 <button class="btn-chart btn-pink" onclick="exibirAquario(1)" id="btnAquario1">Aquario 1</button>
                 <button class="btn-chart btn-white" onclick="exibirAquario(2)" id="btnAquario2">Aquario 2</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(3)" id="btnAquario3">Aquario 3</button>
-                <button class="btn-chart btn-white" onclick="exibirAquario(4)" id="btnAquario4">Aquario 4</button>
+                <!-- <button class="btn-chart btn-white" onclick="exibirAquario(3)" id="btnAquario3">Aquario 3</button>
+                <button class="btn-chart btn-white" onclick="exibirAquario(4)" id="btnAquario4">Aquario 4</button> -->
             </div>
             <div id="graficos">
                 <div id="grafico1" class="display-block">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
 
-                <div id="grafico3" class="display-none">
+                <!-- <div id="grafico3" class="display-none">
                     <h3 class="tituloGraficos">
                         <span id="tituloAquario3"></span>
                     </h3>
@@ -99,7 +99,7 @@
                     <div class="label-captura">
                         <p id="avisoCaptura4" style="color: white"></p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -119,8 +119,8 @@
     function obterDadosGraficos() {
         obterDadosGrafico(1)
         obterDadosGrafico(2)
-        obterDadosGrafico(3)
-        obterDadosGrafico(4)
+        // obterDadosGrafico(3)
+        // obterDadosGrafico(4)
     }
 
     // verificar_autenticacao();
@@ -213,14 +213,14 @@
                 label: 'Umidade',
                 data: [],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
+                borderColor: 'blue',
                 tension: 0.1
             },
             {
                 label: 'Temperatura',
                 data: [],
                 fill: false,
-                borderColor: 'rgb(199, 52, 52)',
+                borderColor: 'grey',
                 tension: 0.1
             }]
         };
@@ -285,7 +285,7 @@
                     if (novoRegistro[0].momento_grafico == dados.labels[dados.labels.length - 1]) {
                         console.log("---------------------------------------------------------------")
                         console.log("Como não há dados novos para captura, o gráfico não atualizará.")
-                        avisoCaptura.innerHTML = "<i class='fa-solid fa-triangle-exclamation'></i> Foi trazido o dado mais atual capturado pelo sensor. <br> Como não há dados novos a exibir, o gráfico não atualizará."
+                        avisoCaptura.innerHTML = "<i class='fa-solid fa-triangle-exclamation'></i> Foi trazido o dado mais atual capturado de acordo com suas postagens <br> Como não há dados novos a exibir, o gráfico não atualizará."
                         console.log("Horário do novo dado capturado:")
                         console.log(novoRegistro[0].momento_grafico)
                         console.log("Horário do último dado capturado:")

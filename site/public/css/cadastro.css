@@ -5,22 +5,28 @@
 .principal {
     width: 100%;
     display: flex;
-    height: 100vh;
+    height: 87vh;
+    /* background-image: url('../assets/imgs/fundo.avif');
+    background-size: cover; */
 }
 
+.fundo {
+    background-image: url('../assets/imgs/fundo.avif');
+    background-size: cover;
+}
 .content {
     width: 60%;
 }
 
 .mapa {
-    width: 40%;
+    width: 35%;
     margin-top: 3%;
-    margin-right: 3%;
+    margin-left: 3%;
 }
 
 .imagem {
     background-image: url('../assets/imgs/intro2.jpg');
-    height: 80vh;
+    height: 75vh;
     background-size: cover;
     width: 100%;
 }

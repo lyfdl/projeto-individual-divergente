@@ -18,8 +18,8 @@
 </head>
 
 <body>
-
-    <!-- <div class="banner"> -->
+    <div class="fundo">
+        <!-- <div class="banner"> -->
         <div class="header">
             <div class="container">
                 <span class="logo2"><a href="index.html"><img class="logo" src="./assets/imgs/Divergent.png"
@@ -44,41 +44,61 @@
         </div>
 
 
-    <div class="principal">
+        <div class="principal">
+
+            <div class="mapa">
+                <div class="imagem"></div>
+            </div>
+
+
+            <div class="content">
+                <div class="alerta_erro">
+                    <div class="card_erro" id="cardErro">
+                        <span id="mensagem_erro"></span>
+                    </div>
+                </div>
+                <!-- Iniciando formulário -->
+                <div class="inicial">
+                    <div class="titulo">CADASTRE-SE</div> <br>
+                    <div class="subtitulo">
+                        Cadastre-se em nosso site para receber pesquisas personalizadas baseadas em suas respotas ao
+                        nossos quizzes diários!
+                    </div>
+                </div>
+
+                <div class="dados">
+                    <p><input id="nome_input" type="text" placeholder="Nome"></p>
+                    <p><input id="email_input" type="email" placeholder="E-mail"></p>
+                    <p><input id="senha_input" type="text" placeholder="Senha"></p>
+                    <p><input id="confirmacao_senha_input" type="text" placeholder="Confirme sua senha"></p>
+                    <button class="enviar" onclick="cadastrar()">SING UP</button>
+                </div>
+                <div id="div_aguardar" class="loading-div">
+                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                </div>
+
+                <div id="div_erros_login"></div>
+            </div>
+        </div>
         
-        <div class="content">
-            <div class="alerta_erro">
-                <div class="card_erro" id="cardErro">
-                    <span id="mensagem_erro"></span>
-                </div>
-            </div>
-            <!-- Iniciando formulário -->
-            <div class="inicial">
-                <div class="titulo">CADASTRE-SE</div> <br>
-                <div class="subtitulo">
-                    Cadastre-se em nosso site para receber pesquisas personalizadas baseadas em suas respotas ao nossos quizzes diários!
-                </div>
-            </div>
-
-            <div class="dados">
-                <p><input id="nome_input" type="text" placeholder="Nome"></p>
-                <p><input id="email_input" type="email" placeholder="E-mail"></p>
-                <p><input id="senha_input" type="text" placeholder="Senha"></p>
-                <p><input id="confirmacao_senha_input" type="text" placeholder="Confirme sua senha"></p>
-                <button class="enviar" onclick="cadastrar()">SING UP</button>
-            </div>
-            <div id="div_aguardar" class="loading-div">
-                <img src="./assets/circle-loading.gif" id="loading-gif">
-            </div>
-
-            <div id="div_erros_login"></div>
-        </div>
-
-        <div class="mapa">
-            <div class="imagem"></div>
-        </div>
     </div>
 
+    <div class="footer">
+        <span class="logo1"><a href="index.html"><img class="logo3" src="./assets/imgs/Divergent.png"
+                    alt=""></a></span>
+        <div class="nav">
+            <ul class="paginas">
+                <!-- <li> <a href="home.html"> HOME</a></li> -->
+                <li> <a href="aboutus.html">ABOUT US</a></li>
+                <li> <a href="simulador.html">PICTURES</a></li>
+                <li> <a href="login.html">LOGIN</a></li>
+                <li><a href="cadastro.html">SIGN UP</a></li>
+            </ul>
+        </div>
+        <div class="direitos">
+            © COPYRIGHT 2023 - LIVIA LANES - ALL RIGHTS RESERVED
+        </div>
+    </div>
 </body>
 
 <!-- 
