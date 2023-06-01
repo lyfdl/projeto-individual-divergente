@@ -15,14 +15,14 @@
             <div class="container">
                 <ul class="nav_bar">
                     <!-- <li> <a href="home.html"> HOME</a></li> -->
-                    <li> <a href="aboutus.html">ABOUT US</a></li>
-                    <li> <a href="simulador.html">PICTURES</a></li>
+                    <li> <a class="nav1" href="aboutus.html">ABOUT US</a></li>
+                    <li> <a class="nav1" href="simulador.html">PICTURES</a></li>
                 </ul>
                 <span class="logo"><a href="index.html"><img class="logo2" src="./assets/imgs/Divergent.png" alt=""></a></span>
                 <ul class="nav_bar">
                     <!-- <li> <a href="simulador.html">UPDATES</a></li> OU TALK WITH US (blog perguntas talvez?) -->
-                    <li> <a href="login.html">LOGIN</a></li>
-                    <li><a href="cadastro.html">SIGN UP</a></li>
+                    <li> <a class="nav1" href="login.html">LOGIN</a></li>
+                    <li><a class="nav1" href="cadastro.html">SIGN UP</a></li>
                 </ul>
             </div>
         </div>
@@ -50,6 +50,18 @@
             <div class="per5"></div>
         </div>
     </div>
+
+
+
+    <div class="all">
+        <div id="carrosel1" class="slides">
+
+        </div>
+        <div class="btnImg">
+            <img class="setasSlide" src="../assets/imgs/carrosel/flecha (1).png" onclick="direita()" alt="" style="height: 50px; width: 50px;">
+            <img class="setasSlide" src="../assets/imgs/carrosel/flecha (2).png" onclick="esquerda()" alt="" style="height: 50px; width: 50px;">
+        </div>
+    </div>
 <!-- aba fotos e link de videos e facçoes -->
 
     <div class="footer">
@@ -57,10 +69,10 @@
         <div class="nav">
             <ul class="paginas">
                 <!-- <li> <a href="home.html"> HOME</a></li> -->
-                <li> <a href="aboutus.html">ABOUT US</a></li>
-                <li> <a href="simulador.html">PICTURES</a></li>
-                <li> <a href="login.html">LOGIN</a></li>
-                <li><a href="cadastro.html">SIGN UP</a></li>
+                <li> <a class="nav1" href="aboutus.html">ABOUT US</a></li>
+                <li> <a class="nav1" href="simulador.html">PICTURES</a></li>
+                <li> <a class="nav1" href="login.html">LOGIN</a></li>
+                <li><a class="nav1" href="cadastro.html">SIGN UP</a></li>
             </ul>
         </div>
         <div class="direitos">
@@ -72,5 +84,39 @@
 </html>
 
 <script>
+var contador = 0 
+var carrosel = ['<img class="img-pictures" src="../assets/imgs/carrosel/img1.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/img2.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/img3.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/img4.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/img5.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/img6.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/img7.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/img8.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/img9.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/img10.jpg" alt="">'
+]
+
+carrosel1.innerHTML = carrosel[contador];
+
+function direita() {
+    if(contador == carrosel.length -1) {
+        contador= 0
+    } else {
+        contador ++
+    }
+    if (contador < carrosel.length) {
+        carrosel1.innerHTML = `${carrosel[contador]}`
+    }
+}
+function esquerda() {
+    contador -= 1
+    if(contador == -1) {
+        contador = carrosel.length
+    } 
+    carrosel1.innerHTML = `${carrosel[contador]}`
+
+}
+
 
 </script>

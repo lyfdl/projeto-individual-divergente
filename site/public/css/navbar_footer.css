@@ -88,9 +88,12 @@ ul {
     margin: 0%;
 }
 
-a {
-    color: rgb(178, 178, 178);
+.nav1 {
+    color: rgb(255, 254, 254);
     text-decoration: none;
+}
+.nav1:hover{
+    color: rgb(5, 18, 103);
 }
 
 .nav_bar {
