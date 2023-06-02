@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,11 @@
     <link rel="stylesheet" href="teste.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
 
-    <div class="banner">
-<div class="header">
+
+    <div class="header">
         <div class="container">
             <span class="logo2"><a href="index.html"><img class="logo" src="./assets/imgs/Divergent.png"
                         alt=""></a></span>
@@ -34,8 +36,49 @@
                 </div>
             </div>
         </div>
-    </div> 
     </div>
-     
+    <div class="conteudo">
+        <h1 style="color: aliceblue;">THE BEST PHOTOS</h1>
+        <h1 style="color: aliceblue;">OF ALL TIME</h1>
+        <button class="olho" onclick="mostrar()"></button>
+    </div> 
+    <div class="pictures" id="pictures"></div>
+
+
+
+
+
+
+
+    <div class="footer">
+        <span class="logo1"><a href="index.html"><img class="logo3" src="./assets/imgs/Divergent.png" alt=""></a></span>
+        <div class="nav">
+            <ul class="paginas">
+                <!-- <li> <a href="home.html"> HOME</a></li> -->
+                <li> <a class="nav1" href="aboutus.html">ABOUT US</a></li>
+                <li> <a class="nav1" href="simulador.html">PICTURES</a></li>
+                <li> <a class="nav1" href="login.html">LOGIN</a></li>
+                <li><a class="nav1" href="cadastro.html">SIGN UP</a></li>
+            </ul>
+        </div>
+        <div class="direitos">
+            © COPYRIGHT 2023 - LIVIA LANES - ALL RIGHTS RESERVED
+        </div>
+    </div>
 </body>
+
 </html>
+
+<script>
+    var lista = [' <span class="linha1"><img style="width: 50vh; height: 50vh;" src="./assets/imgs/carrosel/img2.jpg" alt=""><img style="width: 100vh; height: 50vh" src="./assets/imgs/carrosel/img1.jpg" alt=""><img style="width: 50vh; height: 50vh;" src="./assets/imgs/carrosel/img4.jpg" alt=""></span>', '<span class="linha2"><img style="width: 90vh; height: 60vh" src="./assets/imgs/carrosel/img3.jpg" alt=""><img style="width: 60vh; height: 60vh;" src="./assets/imgs/carrosel/img5.jpg" alt=""><img style="width: 50vh; height: 60vh;" src="./assets/imgs/carrosel/img6.jpg" alt=""></span>',
+        '<span class="linha3"><img style="width: 50vh; height: 60vh;" src="./assets/imgs/carrosel/img7.jpg" alt=""><img style="width: 60vh; height: 60vh;" src="./assets/imgs/carrosel/img10.jpg" alt=""><img style="width: 60vh; height: 60vh;" src="./assets/imgs/carrosel/img9.jpg" alt=""></span>',
+        '<span class="linha4"><img style="width:70vh; height: 50vh" src="./assets/imgs/carrosel/img13.jpg" alt=""><img style="width: 40vh; height: 50vh" src="./assets/imgs/carrosel/img11.jpg" alt=""><img style="width: 80vh; height: 50vh" src="./assets/imgs/carrosel/img8.jpg" alt=""></span>',
+        '<span class="linha5"> <a class="nav1" href="cadastro.html"> Quer ter acesso a fotos inéditas antes do lançamento? cadastre-se em nossa plataforma!</a></span>'
+    ]
+    function mostrar() {
+        for (var contador = 0; contador < lista.length; contador++) {
+            pictures.innerHTML += lista[contador]
+        }
+    }
+
+</script>

@@ -15,7 +15,23 @@ CREATE TABLE aviso (
 	fk_usuario INT,
 	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
 );
+alter table aviso add column momento datetime default current_timestamp;
 
+select * from aviso;
+
+select count(*), second(momento) 
+        from aviso as descricao join usuario
+        on descricao.fk_usuario = usuario.id
+        where fk_usuario = 4
+        group by second(momento) ;
+select * from aviso;
+select count(*), second(momento) from aviso group by second(momento);
+
+select count(*) as descricao, 
+    second(momento) from aviso where fk_usuario = 4
+    group by second(momento) limit 7 desc;
+
+select top 1, count(*), second(momento) from medida group by second(momento);
 create table aquario (
 /* em nossa regra de negócio, um aquario tem apenas um sensor */
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -58,4 +74,4 @@ insert into medida(dht11_umidade, dht11_temperatura, momento, fk_aquario) values
 (95, 16, now(), 2),
 (99, 11, now(), 2);
 
-select* from medida;
+select* from aviso;

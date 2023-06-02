@@ -16,7 +16,7 @@
                 <ul class="nav_bar">
                     <!-- <li> <a href="home.html"> HOME</a></li> -->
                     <li> <a class="nav1" href="aboutus.html">ABOUT US</a></li>
-                    <li> <a class="nav1" href="simulador.html">PICTURES</a></li>
+                    <li> <a class="nav1" href="pictures.html">PICTURES</a></li>
                 </ul>
                 <span class="logo"><a href="index.html"><img class="logo2" src="./assets/imgs/Divergent.png" alt=""></a></span>
                 <ul class="nav_bar">
@@ -54,12 +54,18 @@
 
 
     <div class="all">
-        <div id="carrosel1" class="slides">
-
+        <div class="left">
+            <div class="btnImg">
+                <img class="setasSlide" src="../assets/imgs/carrosel/seta-removebg-preview.png" onclick="direita()" alt="" style="height: 50px; width: 50px;">
+            </div>
+            <div id="carrosel1" class="slides"></div>
+            <div class="btnImg">
+                <img class="setasSlide" src="../assets/imgs/carrosel/2.png" onclick="esquerda()" alt="" style="height: 50px; width: 50px;">
+            </div>
         </div>
-        <div class="btnImg">
-            <img class="setasSlide" src="../assets/imgs/carrosel/flecha (1).png" onclick="direita()" alt="" style="height: 50px; width: 50px;">
-            <img class="setasSlide" src="../assets/imgs/carrosel/flecha (2).png" onclick="esquerda()" alt="" style="height: 50px; width: 50px;">
+
+        <div class="right">
+
         </div>
     </div>
 <!-- aba fotos e link de videos e facçoes -->
@@ -85,21 +91,15 @@
 
 <script>
 var contador = 0 
-var carrosel = ['<img class="img-pictures" src="../assets/imgs/carrosel/img1.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/img2.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/img3.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/img4.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/img5.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/img6.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/img7.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/img8.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/img9.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/img10.jpg" alt="">'
+var carrosel = ['<img class="img-pictures" src="../assets/imgs/carrosel/audacia.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/abnegacao.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/amizade.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/erudicao.jpg" alt="">',
+'<img class="img-pictures" src="../assets/imgs/carrosel/franqueza.jpg" alt="">'
 ]
-
 carrosel1.innerHTML = carrosel[contador];
 
-function direita() {
+function esquerda() {
     if(contador == carrosel.length -1) {
         contador= 0
     } else {
@@ -107,14 +107,15 @@ function direita() {
     }
     if (contador < carrosel.length) {
         carrosel1.innerHTML = `${carrosel[contador]}`
-    }
+    } console.log(contador)
 }
-function esquerda() {
+function direita() {
     contador -= 1
     if(contador == -1) {
-        contador = carrosel.length
+        contador = carrosel.length-1
     } 
     carrosel1.innerHTML = `${carrosel[contador]}`
+    console.log(contador)
 
 }
 
