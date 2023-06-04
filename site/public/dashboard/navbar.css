@@ -72,9 +72,12 @@ a {
     width: 12%;
     background-color: #1c275b;
     color: white;
-    border-radius: 2px;
+    border-radius: 20px;
     text-align: center;
     padding: 5px 1px;
     /* margin-bottom: 100px; */
     cursor: pointer;
 }
+.btn-logout :hover{
+    color: rgb(98, 111, 228);
+    }

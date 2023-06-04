@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaTech | Dashboards</title>
 
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
-    <!-- <link rel="stylesheet" href="dashboards.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="dashboards.css">
     <link rel="stylesheet" href="navbar.css">
     <script src="../js/funcoes.js"></script>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-  
+
     <!-- scripts do Chart.js - 2022-1 -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -24,7 +24,7 @@
 
 <body onload=" obterDadosGrafico()">
 
-    
+
     <div class="header">
         <div class="container">
             <span class="logo2"><a href="home.html"><img class="logo" src="../assets/imgs/Divergent.png"
@@ -44,6 +44,9 @@
         </div>
     </div>
 
+
+
+    <div class="pagina">
         <div class="dash">
             <!-- <div class="btns-dash">
                 O gráfico é chamado de acordo com o id (fk_aquario) do banco 
@@ -55,7 +58,7 @@
             <div id="graficos">
                 <div id="grafico1" class="display-block">
                     <h3 class="tituloGraficos">
-                        <span id="tituloMural">123</span>
+                        <span id="tituloMural">Sua atividade em seu blog:</span>
                     </h3>
                     <div class="graph">
                         <canvas id="myChartCanvas"></canvas>
@@ -102,6 +105,28 @@
                 </div> -->
             </div>
         </div>
+        <div class="lateral">
+            <div class="introc">
+                Se achando um pouco inativo? Use nossa calculadora para saber quanto tempo você levará para terminar seu livro ou fazer seu planejamento para quando termina-lo! 
+            </div>
+            <div class="info">
+                Nome do livro: <input id="ipt_nome"> Quantidade de páginas: <input id="ipt_paginas"> 
+                <div class="opçoes">
+                    <button onclick="calcular()">calcular</button>
+                    <button onclick="planejar()">planejar</button>
+                </div>
+            </div>
+            <div class="calculo">
+                Quanto tempo, em segundos, você leva para ler uma página? <input id="ipt_tempo">
+                Sugerimos que você cronometre toda vez que começar um livro novo pois as formatações variam e consequentemente seu tempo de leitura também
+            </div>
+            <div class="planejamento">
+                Nome do livro: <input id="ipt_nome"> <br> Quantidade de páginas: <input id="ipt_paginas"> 
+                Em quantos dias você quer realizar a leitura dele?
+            </div>
+        </div>
+    </div>
+
 
 
 
@@ -141,7 +166,7 @@
     //             elementoAtual.classList.remove("display-block")
     //         }
     //         elementoAtual.classList.add("display-none")
-            
+
     //         // alterando estilo do botão
     //         let btnAtual = document.getElementById(`btnAquario${i}`)
     //         if (btnAtual.classList.contains("btn-pink")) {
@@ -149,12 +174,12 @@
     //         }
     //         btnAtual.classList.add("btn-white")
     //     }
-        
+
     //     // exibindo - ou não - o gráfico
     //     let graficoExibir = document.getElementById(`grafico${idAquario}`)
     //     graficoExibir.classList.remove("display-none")
     //     graficoExibir.classList.add("display-block")
-        
+
     //     // alterando estilo do botão
     //     let btnExibir = document.getElementById(`btnAquario${idAquario}`)
     //     btnExibir.classList.remove("btn-white")
@@ -219,13 +244,13 @@
                 borderColor: 'blue',
                 tension: 0.1
             }
-            // {
-            //     label: 'Temperatura',
-            //     data: [],
-            //     fill: false,
-            //     borderColor: 'grey',
-            //     tension: 0.1
-            // }]
+                // {
+                //     label: 'Temperatura',
+                //     data: [],
+                //     fill: false,
+                //     borderColor: 'grey',
+                //     tension: 0.1
+                // }]
             ]
         };
 
@@ -296,17 +321,17 @@
                     //     console.log(dados.labels[dados.labels.length - 1])
                     //     console.log("---------------------------------------------------------------")
                     // } else {
-                        // tirando e colocando valores no gráfico
-                        dados.labels.shift(); // apagar o primeiro
-                        dados.labels.push(novoRegistro[0].momento); // incluir um novo momento
+                    // tirando e colocando valores no gráfico
+                    dados.labels.shift(); // apagar o primeiro
+                    dados.labels.push(novoRegistro[0].momento); // incluir um novo momento
 
-                        dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                        dados.datasets[0].data.push(novoRegistro[0].descricao); // incluir uma nova medida de umidade
+                    dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+                    dados.datasets[0].data.push(novoRegistro[0].descricao); // incluir uma nova medida de umidade
 
-                        // dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
-                        // dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
+                    // dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
+                    // dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
 
-                        myChart.update();
+                    myChart.update();
                     // }
 
                     // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
@@ -323,4 +348,7 @@
             });
 
     }
+
+
+
 </script>

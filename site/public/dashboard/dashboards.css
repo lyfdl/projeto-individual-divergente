@@ -86,7 +86,7 @@ body {
   padding: 20px;
 }
 
-.publicacao > *:not(:last-child) {
+.publicacao>*:not(:last-child) {
   padding: 0 0 10px 0;
 }
 
@@ -105,7 +105,7 @@ body {
   justify-content: flex-end;
 }
 
-.div-buttons > * {
+.div-buttons>* {
   margin-left: 30px;
 }
 
@@ -116,15 +116,57 @@ body {
 }
 
 .dash {
-  width: 80%;
-  position: relative;
+  width: 65%;
+  /* position: relative; */
   top: 0;
-  left: 20%;
-  background-color: #161618;
-  height: 100vh;
+  /* left: 25%; */
+  background-color: #030a30a2;
+  /* height: 87vh; */
   overflow: auto;
 }
 
+.pagina {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+}
+
+.lateral {
+  width: 25%;
+  color: aliceblue;
+}
+.introc{
+width: 100%;
+font-size: 20px;
+margin: 3vh;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+.info{
+width: 100%;
+height: 20vh;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+.calculo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.planejamento{
+width: 100%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+}
 .regua {
   display: flex;
   flex-wrap: wrap;

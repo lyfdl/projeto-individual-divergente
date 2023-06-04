@@ -105,12 +105,12 @@
   font-weight: 800;
 }
 
-.formulario input {
+/* .formulario input {
   border: 2px solid #32b9cd;
   height: 30px;
   text-align: center;
   border-radius: 10px;
-}
+} */
 
 .campo {
   display: flex;
