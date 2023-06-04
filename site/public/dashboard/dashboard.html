@@ -107,28 +107,24 @@
         </div>
         <div class="lateral">
             <div class="introc">
-                Se achando um pouco inativo? Use nossa calculadora para saber quanto tempo você levará para terminar seu livro ou fazer seu planejamento para quando termina-lo! 
+                Se achando um pouco inativo? Use nossa calculadora para saber quanto tempo você levará para terminar seu
+                livro ou fazer seu planejamento para quando termina-lo!
             </div>
             <div class="info">
-                Nome do livro: <input id="ipt_nome"> Quantidade de páginas: <input id="ipt_paginas"> 
+                Nome do livro: <input id="ipt_nome"> Quantidade de páginas: <input id="ipt_paginas">
                 <div class="opçoes">
                     <button onclick="calcular()">calcular</button>
                     <button onclick="planejar()">planejar</button>
                 </div>
             </div>
-            <div class="calculo">
-                Quanto tempo, em segundos, você leva para ler uma página? <input id="ipt_tempo">
-                Sugerimos que você cronometre toda vez que começar um livro novo pois as formatações variam e consequentemente seu tempo de leitura também
+            <div class="escolha" id="escolhido">
+
             </div>
-            <div class="planejamento">
-                Nome do livro: <input id="ipt_nome"> <br> Quantidade de páginas: <input id="ipt_paginas"> 
-                Em quantos dias você quer realizar a leitura dele?
+            <div class="conclusao" id="resultado">
+
             </div>
         </div>
     </div>
-
-
-
 
 </body>
 
@@ -349,6 +345,26 @@
 
     }
 
+</script>
 
-
+<script>
+    function calcular() {
+        escolhido.innerHTML = ` Quanto tempo, em segundos, você leva para ler uma página? <input id="ipt_tempo"> Sugerimos que você cronometre toda vez que começar um livro novo pois as formatações variam e consequentemente seu tempo de leitura também <button onclick="mostrar()">meus resultados</button>`
+    }
+    function planejar() {
+        escolhido.innerHTML = `Em quantos dias você quer realizar a leitura dele?  <input id="ipt_dias"> <button onclick="mostrar()">meus resultados</button>`
+    }
+    function mostrar() {
+        var livro = ipt_nome.value
+        var paginas = Number(ipt_paginas.value)
+        var tempo = Number(ipt_tempo.value)
+        var dias = Number(ipt_dias.value)
+        if(tempo != ''){
+            resultado.innerHTML = 123
+        } else if (dias != ''){
+            resultado.innerHTML = 123
+        } else {
+            resultado.innerHTML = 'insira um valor válido'
+        }
+    }
 </script>

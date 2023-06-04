@@ -147,25 +147,28 @@ align-items: center;
 }
 .info{
 width: 100%;
-height: 20vh;
+height: 18vh;
 display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: center;
 }
-.calculo{
+.escolha{
   width: 100%;
+  height: 20vh;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
 }
-.planejamento{
-width: 100%;
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
+.conclusao{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .regua {
   display: flex;
