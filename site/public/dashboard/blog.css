@@ -2,10 +2,127 @@
     width: 100%;
     height: 80vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .avisos {
     width: 100%;
 }
+.div-results{
+    width: 60%;
+}
+.div-form{
+    width: 40%;
+}
+
+
+
+
+.label-captura {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dash-right .avisos {
+    width: 100%;
+    /* border: 3px solid pink; */
+    color: rgb(216, 216, 216);
+    font-family: "Exo 2", sans-serif;
+  }
+  
+  /* .dash-right .avisos .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+  
+
+  
+
+  
+
+  
+  .dash-right .avisos .div-form input {
+    width: 90%;
+    border-radius: 5px;
+    border-color: #acb1fb;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .dash-right .avisos .div-form textarea {
+    width: 90%;
+    /* color: #E6005A; */
+    border: 3px solid  #acb1fb;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .dash-right .avisos .div-form button {
+    cursor: pointer;
+    font-family: "Exo 2", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #acb1fb;
+    background-color: #04047a81;
+    width: 120px;
+    margin-left: 42vh;
+    margin-top: 10px;
+  }
+
+
+
+
+
+.publicacao-btn-editar {
+    cursor: pointer;
+    font-family: "Exo 2", sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 8px;
+    color: #acb1fb;
+    background-color: #04047a81;
+    width: 80px;
+  }
+  
+  .publicacao {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    border-bottom: 3px solid #acb1fb;
+    padding: 20px;
+    color: #acb1fb;
+  }
+  
+
+  
+  .div-results {
+    width: 100%;
+  }
+  
+  .div-results .feed-container {
+    background-color:#030a30a2;;
+    border-radius: 5px;
+    margin-bottom: 80px;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  
+  .div-buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .div-buttons>* {
+    margin-left: 30px;
+  }
