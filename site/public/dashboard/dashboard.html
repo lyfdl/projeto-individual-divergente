@@ -33,7 +33,6 @@
                 <ul class="nav_bar">
                     <li> <a href="../index.html">HOME</a></li>
                     <li> <a href="cards.html">YOUR PAGE</a></li>
-                    <li> <a href="">QUIZ</a></li>
                     <li> <a href="mural.html">BLOG</a></li>
                     <li> <a href="dashboard.html">INSIGHTS</a></li>
                 </ul>
@@ -348,23 +347,25 @@
 </script>
 
 <script>
+    var lista = []
+    var lista2 = []
     function calcular() {
+        var livro = ipt_nome.value
+        var paginas = Number(ipt_paginas.value)
+        lista.push[livro]
+        lista2.push[paginas]
         escolhido.innerHTML = ` Quanto tempo, em segundos, você leva para ler uma página? <input id="ipt_tempo"> Sugerimos que você cronometre toda vez que começar um livro novo pois as formatações variam e consequentemente seu tempo de leitura também <button onclick="mostrar()">meus resultados</button>`
     }
     function planejar() {
-        escolhido.innerHTML = `Em quantos dias você quer realizar a leitura dele?  <input id="ipt_dias"> <button onclick="mostrar()">meus resultados</button>`
+        escolhido.innerHTML = `Em quantos dias você quer realizar a leitura dele?  <input id="input_dias"> <button onclick="mostrar()">meus resultados</button>`
     }
     function mostrar() {
-        var livro = ipt_nome.value
-        var paginas = Number(ipt_paginas.value)
-        var tempo = Number(ipt_tempo.value)
-        var dias = Number(ipt_dias.value)
-        if(tempo != ''){
-            resultado.innerHTML = 123
-        } else if (dias != ''){
-            resultado.innerHTML = 123
-        } else {
+        var tempo = Number(ipt_tempo.value);
+        var dias = Number(input_dias.value);
+        if(tempo == ''){
             resultado.innerHTML = 'insira um valor válido'
-        }
+        } else {
+            resultado.innerHTML = 123
+        } 
     }
 </script>
