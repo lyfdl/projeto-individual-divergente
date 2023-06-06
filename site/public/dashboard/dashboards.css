@@ -139,28 +139,41 @@ body {
 .introc{
 width: 100%;
 font-size: 20px;
-margin: 3vh;
+/* margin: 3vh; */
+margin-top: 3vh;
+margin-bottom: 3vh;
 display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: center;
+text-align: center;
 }
 .info{
 width: 100%;
-height: 18vh;
+height: 20vh;
 display: flex;
-justify-content: center;
+justify-content: space-between;
 flex-direction: column;
 align-items: center;
+margin-bottom: 3vh;
 }
-.escolha{
+.escolha2{
   width: 100%;
-  height: 20vh;
+  height: 23vh;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-content: space-evenly;
+}
+.escolha3{
+  width: 100%;
+  height: 13vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .conclusao{
   width: 100%;
@@ -169,6 +182,28 @@ align-items: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 20px;
+}
+.quest{
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 5px 8px;
+  color: rgb(19, 145, 235);
+  background-color: #020133;
+  width: 120px;
+}
+.quest:hover{
+  color: #020133;
+  background-color: rgb(19, 145, 235) ;
+}
+.quest2{
+  background-color: rgb(164, 197, 246) ;
+  border-color: #020133;
+  border-radius: 5px;
 }
 
 

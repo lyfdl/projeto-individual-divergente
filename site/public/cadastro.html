@@ -170,8 +170,13 @@
 
             finalizarAguardar();
             return false;
-        }
-        else {
+        } else if (emailVar.indexOf("@") < 0 || emailVar.indexOf(".com") < 0 && emailVar.indexOf(".br") < 0 && emailVar.indexOf(".org") < 0 ) {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "Insira um email válido!";
+
+            finalizarAguardar();
+            return false;
+        } else {
             setInterval(sumirMensagem, 5000)
         }
 

@@ -110,14 +110,27 @@
                 livro ou fazer seu planejamento para quando termina-lo!
             </div>
             <div class="info">
-                Nome do livro: <input id="ipt_nome"> Quantidade de páginas: <input id="ipt_paginas">
+                Nome do livro: <input class="quest2" id="ipt_nome"> Quantidade de páginas: <input class="quest2" id="ipt_paginas">
                 <div class="opçoes">
-                    <button onclick="calcular()">calcular</button>
-                    <button onclick="planejar()">planejar</button>
+                    <button class="quest" onclick="calcular()">calcular</button>
+                    <button class="quest" onclick="planejar()">planejar</button>
                 </div>
             </div>
-            <div class="escolha" id="escolhido">
 
+            <div class="escolha" id="calculo" style="display: none;">
+                <div class="escolha2">
+                    <span>Quanto tempo, em segundos, você leva para ler uma página? </span>
+                    <input class="quest2" id="ipt_tempo">
+                    <span>Sugerimos que você cronometre toda vez que começar um livro novo pois as formatações variam e consequentemente seu tempo de leitura também</span> 
+                     <button class="quest" onclick="mostrar()">meus resultados</button>
+                </div>
+            </div>
+            <div class="escolha" id="planejamento" style="display: none;">
+                <div class="escolha3">
+                    <span>Em quantos dias você quer realizar a leitura dele?</span>
+                    <input class="quest2" id="input_dias"> 
+                    <button class="quest" onclick="mostrar()">meus resultados</button>
+                </div>
             </div>
             <div class="conclusao" id="resultado">
 
@@ -350,22 +363,48 @@
     var lista = []
     var lista2 = []
     function calcular() {
+        resultado.innerHTML = ''
         var livro = ipt_nome.value
         var paginas = Number(ipt_paginas.value)
-        lista.push[livro]
-        lista2.push[paginas]
-        escolhido.innerHTML = ` Quanto tempo, em segundos, você leva para ler uma página? <input id="ipt_tempo"> Sugerimos que você cronometre toda vez que começar um livro novo pois as formatações variam e consequentemente seu tempo de leitura também <button onclick="mostrar()">meus resultados</button>`
+        if (livro == '' || paginas == '' || (livro == '' && paginas == '')){
+            resultado.innerHTML = 'Insira um valor válido!'
+        } else {
+            lista.push[livro]
+            lista2.push[paginas]
+            document.getElementById('calculo').style.display = 'block'
+            document.getElementById('planejamento').style.display = 'none'
+        }
+        
     }
     function planejar() {
-        escolhido.innerHTML = `Em quantos dias você quer realizar a leitura dele?  <input id="input_dias"> <button onclick="mostrar()">meus resultados</button>`
+        resultado.innerHTML = ''
+        var livro = ipt_nome.value
+        var paginas = Number(ipt_paginas.value)
+        if (livro == '' || paginas == '' || (livro == '' && paginas == '')){
+            resultado.innerHTML = 'Insira um valor válido!'
+        } else {
+            lista.push[livro]
+            lista2.push[paginas]
+            document.getElementById('planejamento').style.display = 'block';
+            document.getElementById('calculo').style.display = 'none';
+        }
+        
     }
     function mostrar() {
+        var livro = ipt_nome.value
+        var paginas = Number(ipt_paginas.value)
+        resultado.innerHTML = ''
         var tempo = Number(ipt_tempo.value);
         var dias = Number(input_dias.value);
-        if(tempo == ''){
-            resultado.innerHTML = 'insira um valor válido'
-        } else {
-            resultado.innerHTML = 123
-        } 
+        var calculod = parseInt(paginas/dias);
+        var calculot = (paginas*tempo)/60;
+        var calculot2 = parseInt(calculot/60);
+        if(tempo == '' && dias != ''){
+            resultado.innerHTML = `Você levará aproximadamente ${calculod} dias para ler o livro "${livro}"`
+        } else if (tempo != '' && dias == '') {
+            resultado.innerHTML = `Você levará aproximadamente ${calculot} minutos ou ${calculot2} horas para ler o livro "${livro}"`
+        } else if (tempo == '' && dias == ''){
+            resultado.innerHTML = 'Insira um valor válido!'
+        }
     }
 </script>

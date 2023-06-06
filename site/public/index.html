@@ -56,16 +56,16 @@
     <div class="all">
         <div class="left">
             <div class="btnImg">
-                <img class="setasSlide" src="../assets/imgs/carrosel/seta-removebg-preview.png" onclick="direita()" alt="" style="height: 50px; width: 50px;">
+                <img class="setasSlide" src="./assets/imgs/carrosel/seta-removebg-preview.png" onclick="direita()" alt="" style="height: 50px; width: 50px;">
             </div>
             <div id="carrosel1" class="slides"></div>
+            
+
             <div class="btnImg">
-                <img class="setasSlide" src="../assets/imgs/carrosel/2.png" onclick="esquerda()" alt="" style="height: 50px; width: 50px;">
+                <img class="setasSlide" src="./assets/imgs/carrosel/2.png" onclick="esquerda()" alt="" style="height: 50px; width: 50px;">
             </div>
         </div>
-
-        <div class="right">
-
+        <div id="textinho_div" class="right">
         </div>
     </div>
 <!-- aba fotos e link de videos e facçoes -->
@@ -91,13 +91,21 @@
 
 <script>
 var contador = 0 
-var carrosel = ['<img class="img-pictures" src="../assets/imgs/carrosel/audacia.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/abnegacao.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/amizade.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/erudicao.jpg" alt="">',
-'<img class="img-pictures" src="../assets/imgs/carrosel/franqueza.jpg" alt="">'
+var carrosel = ['<img class="img-pictures" src="./assets/imgs/carrosel/audacia.jpg" alt="">',
+'<img class="img-pictures" src="./assets/imgs/carrosel/abnegacao.jpg" alt="">',
+'<img class="img-pictures" src="./assets/imgs/carrosel/amizade.jpg" alt="">',
+'<img class="img-pictures" src="./assets/imgs/carrosel/erudicao.jpg" alt="">',
+'<img class="img-pictures" src="./assets/imgs/carrosel/franqueza.jpg" alt="">'
 ]
+var facçao = ['<span class="fac-desc">AUDÁCIA</span><span class="manifesto">manifesto</span><span class="topico">We believe in freedom from fear, in ordinary acts of bravery in defending those who cannot defend themselves. We believe that cowardice is to blame fro the world´s injustices. We belive that peace is hard-won, that sometimes it is necessary to fight for peace.</span>',
+'<span class="fac-desc">ABNEGAÇÃO</span><span class="manifesto">manifesto</span><span class="topico">I will be my undoing if I become my obsession. I will forget the ones I love if I do not serve them. I will war with others if I refuse to see them. Therefore I choose to turn away from my reflection, to rely not on myself but on my brothers and sisters, to project always outward until I disappear.</span>',
+'<span class="fac-desc">AMIZADE</span><span class="manifesto">manifesto</span><span class="topico">We value kindness, compassion, open communication and harmony between people. We believe that peace can only be achieved through mutual understanding and empathy, have an altruistic nature and your commitment to helping others, we promote the well-being and emotional balance of society, through the resolution of conflicts and the creation of a cozy environment.We are mediators and peacemakers, known for our ability to resolve disputes and unite different factions. Donate Blood, Donate Time, Donate Wisdom.</span>',
+'<span class="fac-desc">ERUDIÇÃO</span><span class="manifesto">manifesto</span><span class="topico">Intelligence is a gift, not a right. It must not be wielded not as a weapon but as a tool for the betterment of others. Knowledge is the only logical solution to avoid conflict. Intelligence must be used for the benefit of society.</span>',
+'<span class="fac-desc">FRANQUEZA</span><span class="manifesto">manifesto</span><span class="topico">We value honesty and transparency as fundamental principles. Honesty is the foundation of courage. We believe that truth is essential for building solid relationships and a just society, even if the truth can be harsh or uncomfortable, avoiding manipulation and falsehood, we value fairness and honesty as essential pillars for a functional society.</span>']
+
+
 carrosel1.innerHTML = carrosel[contador];
+textinho_div.innerHTML = facçao[contador];
 
 function esquerda() {
     if(contador == carrosel.length -1) {
@@ -107,6 +115,7 @@ function esquerda() {
     }
     if (contador < carrosel.length) {
         carrosel1.innerHTML = `${carrosel[contador]}`
+        textinho_div.innerHTML = `${facçao[contador]}`
     } console.log(contador)
 }
 function direita() {
@@ -115,6 +124,7 @@ function direita() {
         contador = carrosel.length-1
     } 
     carrosel1.innerHTML = `${carrosel[contador]}`
+    textinho_div.innerHTML = `${facçao[contador]}`
     console.log(contador)
 
 }
