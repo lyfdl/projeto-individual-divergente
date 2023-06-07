@@ -48,6 +48,9 @@ a {
     justify-content: space-evenly;
     align-items: center;
 }
+a:hover{
+    color: #1c275b;
+}
 
 .logo {
     height: 10vh;

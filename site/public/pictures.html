@@ -23,7 +23,7 @@
                 <ul class="nav_bar">
                     <!-- <li> <a href="home.html"> HOME</a></li> -->
                     <li> <a class="nav1" href="aboutus.html">ABOUT US</a></li>
-                    <li> <a class="nav1" href="simulador.html">PICTURES</a></li>
+                    <li> <a class="nav1" href="pictures.html">PICTURES</a></li>
                     <!-- <li> <a href="simulador.html">UPDATES</a></li> OU TALK WITH US -->
                     <li> <a class="nav1" href="login.html">LOGIN</a></li>
                     <li><a class="nav1" href="cadastro.html">SIGN UP</a></li>
@@ -37,11 +37,14 @@
             </div>
         </div>
     </div>
-    <div class="conteudo">
-        <h1 style="color: aliceblue;">THE BEST PHOTOS</h1>
-        <h1 style="color: aliceblue;">OF ALL TIME</h1>
-        <button class="olho" onclick="mostrar()"></button>
-    </div> 
+    <div id="aparecer" style="display: block;">
+        <div class="conteudo">
+            <h1 style="color: aliceblue;">THE BEST PHOTOS</h1>
+            <h1 style="color: aliceblue;">OF ALL TIME</h1>
+            <button class="olho" onclick="mostrar()"></button>
+        </div> 
+    </div>
+    
     <div class="pictures" id="pictures"></div>
 
 
@@ -56,7 +59,7 @@
             <ul class="paginas">
                 <!-- <li> <a href="home.html"> HOME</a></li> -->
                 <li> <a class="nav1" href="aboutus.html">ABOUT US</a></li>
-                <li> <a class="nav1" href="simulador.html">PICTURES</a></li>
+                <li> <a class="nav1" href="pictures.html">PICTURES</a></li>
                 <li> <a class="nav1" href="login.html">LOGIN</a></li>
                 <li><a class="nav1" href="cadastro.html">SIGN UP</a></li>
             </ul>
@@ -76,9 +79,11 @@
         '<span class="linha5"> <a class="nav1" href="cadastro.html"> Quer ter acesso a fotos inéditas antes do lançamento? cadastre-se em nossa plataforma!</a></span>'
     ]
     function mostrar() {
+        document.getElementById('aparecer').style.display = 'none'
         for (var contador = 0; contador < lista.length; contador++) {
             pictures.innerHTML += lista[contador]
         }
+        
     }
 
 </script>
